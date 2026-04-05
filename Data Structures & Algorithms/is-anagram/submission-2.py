@@ -1,0 +1,11 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if len(s)==len(t):
+            x=[0]*26
+            for c in s:
+                x[ord(c)-97]+=1
+            for c in t:
+                x[ord(c)-97]-=1
+            if x==[0]*26:
+                return True
+        return False
